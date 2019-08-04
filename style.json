@@ -1,0 +1,312 @@
+{
+    "version": 8,
+    "name": "Blank",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template",
+        "mapbox:sdk-support": {
+            "js": "0.54.0",
+            "android": "6.7.0",
+            "ios": "4.7.0"
+        },
+        "mapbox:groups": {
+            "400b6ae12d6612b42f03d7539d5fbc89": {
+                "name": "Roads",
+                "collapsed": false
+            }
+        }
+    },
+    "center": [18.096588703342036, 59.34546154858643],
+    "zoom": 11.762027364902249,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {
+            "url": "mapbox://alaaalshawa.cjyudjp7d1ffv2is2e4m1lppo-674bs,alaaalshawa.cjyudahm70t9k2ip03oaeuxga-2j4ex,alaaalshawa.cjyud499d0he42omljer56t9n-4el6c,alaaalshawa.cjyuddzmf1fe72is2tk318kfi-9i29n,mapbox.mapbox-streets-v8,alaaalshawa.cjyucwonz01pe2nmm3hm4za7d-4pbdl,alaaalshawa.cjyud1v4v12xu2tp1p4tj3nli-16oi9,alaaalshawa.cjyud783d0g332urti374ofuz-4zpaz,alaaalshawa.cjyudm3p90sag2poav0sqtdam-60jgu,alaaalshawa.cjyudc3u10nrs2osvu90ujet5-4xr03,alaaalshawa.cjyudib1c0cpr2ipkdcn3iznf-4wpka,alaaalshawa.cjyucz1k60d052pp156a0jood-9m13u,alaaalshawa.cjyud8v3r05ch2on3qrpeiyba-3df1q,alaaalshawa.cjyudqqyk0rw52ooac4qhgx0h-0ox70",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/alaaalshawa/cjy060tf8055t1cpmxmztocjb/ck2u8j60r58fu0sgyxrigm3cu",
+    "glyphs": "mapbox://fonts/alaaalshawa/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {"background-color": "hsl(0, 0%, 97%)"}
+        },
+        {
+            "id": "water",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "water",
+            "layout": {},
+            "paint": {"fill-color": "hsl(0, 0%, 85%)"}
+        },
+        {
+            "id": "highway-paths-bridleway",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_paths_bridleway",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "#ced3f3",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    200
+                ]
+            }
+        },
+        {
+            "id": "highway-lifecycle-proposed",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_lifecycle_proposed",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "#adb4e1",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    200
+                ]
+            }
+        },
+        {
+            "id": "highway-paths-path",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_paths_path",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "hsla(52, 90%, 55%, 0.87)",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    200
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-living-street",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_living_street",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "hsl(344, 48%, 56%)",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    600
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-pedestrian",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_pedestrian",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "hsl(281, 53%, 67%)",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    600
+                ]
+            }
+        },
+        {
+            "id": "highway-lifecycle-construction",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_lifecycle_construction",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "#6774cb",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    200
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-primary-link",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_primary_link",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "#daf1e7",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    600
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-primary",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_primary",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "#92d9ba",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    900
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-raceway",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_raceway",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "hsl(62, 61%, 67%)",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    600
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-road",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_road",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "#ddbd83",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    600
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-residential",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_residential",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "#cb9c43",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    800
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-motorway-link",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_motorway_link",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-color": "#e1a494",
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    900
+                ]
+            }
+        },
+        {
+            "id": "highway-roads-motorway",
+            "type": "line",
+            "metadata": {"mapbox:group": "400b6ae12d6612b42f03d7539d5fbc89"},
+            "source": "composite",
+            "source-layer": "Highway_roads_motorway",
+            "layout": {"line-cap": "round", "line-join": "round"},
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    ["exponential", 1.99],
+                    ["zoom"],
+                    10,
+                    1,
+                    22,
+                    900
+                ],
+                "line-color": "#c96245"
+            }
+        }
+    ],
+    "created": "2019-07-12T13:57:13.092Z",
+    "id": "cjy060tf8055t1cpmxmztocjb",
+    "modified": "2019-08-04T00:25:41.393Z",
+    "owner": "alaaalshawa",
+    "visibility": "private",
+    "draft": false
+}
